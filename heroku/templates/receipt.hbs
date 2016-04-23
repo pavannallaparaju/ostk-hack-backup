@@ -1,0 +1,41 @@
+"template_type" : "receipt",
+"recipient_name" : {{recipient_name}},
+"order_number" : {{order_number}},
+"currency" : {{currency}},
+"payment_method" : {{payment_method}},
+"order_url" : {{order_url}},
+"timestamp" : {{timestamp}},
+"elements":[
+{{#each elements}}
+    {{#if @index}},{{/if}}
+    {
+        "title" : {{title}},
+        "subtitle" : {{subtitle}},
+        "quantity" : {{quantity}},
+        "price" : {{price}},
+        "currency" : {{currency}},
+        "image_url" : {{image_url}}
+    }
+{{/each}}],
+"address" : {
+    "street_1" : {{street_1}},
+    "street_2" : {{street_2}},
+    "city" : {{city}},
+    "postal_code" : {{postal_code}},
+    "state" : {{state}},
+    "country" : {{country}}
+},
+"summary":{
+    "subtotal" : {{subtotal}},
+    "shipping_cost" : {{shipping_cost}},
+    "total_tax" : {{total_tax}},
+    "total_cost" : {{total_cost}}
+},
+"adjustments":[
+{{#each adjustments}}
+    {{#if @index}},{{/if}}
+    {
+        "name" : {{name}},
+        "amount" : {{amount}}
+    }
+{{/each}}]

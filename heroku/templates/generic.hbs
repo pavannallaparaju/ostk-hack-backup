@@ -1,0 +1,24 @@
+"template_type" : "generic",
+"elements"  :[
+{{#each elements}}
+    {{#if @index}},{{/if}}
+    {
+        "title"     : {{title}},
+        "image_url" : {{image_url}},
+        "subtitle"  : {{subtitle}},
+        "buttons"   :[
+        {{#each buttons}}
+            {{#if @index}},{{/if}}
+            {
+                "type"  : {{type}},
+                "title" : {{title}},
+            {{#if url}}
+                "url"   : {{url}}
+            {{/if}}
+            {{#if payload}}
+                "payload"   : {{USER_DEFINED_PAYLOAD}}
+            {{/if}}
+            }
+        {{/each}}]
+    }
+{{/each}}]

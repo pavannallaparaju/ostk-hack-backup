@@ -1,0 +1,16 @@
+"template_type" : "button",
+"text" : {{question}},
+"buttons" : [
+{{#each option}}
+    {{#if @index}},{{/if}}
+    {
+        "type" : {{type}},
+        "title" : {{title}},
+        {{#if url}}
+            "url" : {{url}}
+        {{/if}}
+        {{#if payload}}
+            "payload" : {{USER_DEFINED_PAYLOAD}}
+        {{/if}}
+    }
+{{/each}}]

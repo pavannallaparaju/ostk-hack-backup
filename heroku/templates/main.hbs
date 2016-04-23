@@ -1,0 +1,21 @@
+{
+    "recipient" : { "id": {{USER_ID}} },
+    "message"   : {
+        "attachment"    : {
+            "type"      : "template",
+            "payload"   : {
+                {{#if generic}}
+                    {{> generic}}
+                {{else}}
+                    {{#if receipt}}
+                        {{> receipt}}
+                    {{else}}
+                        {{#if buttons}}
+                            {{> buttons}}
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            }
+        }
+    }
+}
